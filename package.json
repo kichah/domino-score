@@ -1,0 +1,16 @@
+{
+  "name": "dimino",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/style.css -w",
+    "dev-server": "live-server",
+    "start": "npm-run-all --parallel dev-server watch:sass"
+  },
+  "author": "tofi",
+  "license": "ISC",
+  "dependencies": {
+    "leader-line": "^1.0.7"
+  }
+}

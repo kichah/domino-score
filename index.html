@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Playball&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <title>Domino Score Calculator</title>
+  </head>
+  <body>
+    <h1 class="heading-1">Domino Score Calculator</h1>
+    <div class="game">
+      <div class="player player-1">
+        <h2 class="player__heading">Player 1</h2>
+        <input type="number" name="score__input" id="0" class="player__input" />
+        <div class="player__score score-1"></div>
+      </div>
+      <div class="player player-2">
+        <h2 class="player__heading">Player 2</h2>
+        <input type="number" name="score__input" id="1" class="player__input" />
+        <div class="player__score score-2"></div>
+      </div>
+    </div>
+    <div class="container hidden">
+      <div class="winner hidden">player 1 wins</div>
+    </div>
+    <button class="btn">REST</button>
+    <script src="/node_modules/leader-line/leader-line.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
