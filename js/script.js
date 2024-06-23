@@ -80,6 +80,7 @@ document.querySelector('.btn').addEventListener('click', (e) => {
 
 window.addEventListener('load', (e) => {
   const data = JSON.parse(localStorage.getItem('score'));
+  if (!data) return;
   console.log(data);
   data.forEach((sc, i) => {
     if (sc === 0) return;
