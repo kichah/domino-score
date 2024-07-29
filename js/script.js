@@ -16,11 +16,11 @@ const scoreContainer = [
 ];
 const score = [0, 0];
 let won = false;
-input.forEach((input) => input.addEventListener('keypress', scoreAdding));
+input.forEach((input) => input.addEventListener('blur', scoreAdding));
 
 function scoreAdding(e) {
   //guard close
-  if (e.key !== 'Enter' || !this.value || +this.value === 0) return;
+  if (!this.value || +this.value === 0) return;
   let player = e.target.id === '0' ? 0 : 1;
   //if score is 0
   if (score[player] === 0 && !won && score[player] + +this.value < 100) {
@@ -67,6 +67,7 @@ function renderScoreBox(score, player, v = 0, first = true) {
 function line(sEle, eEle) {
   new LeaderLine(sEle, eEle, { path: 'grid', color: '#eee' });
 }
+// rest
 document.querySelector('.btn').addEventListener('click', (e) => {
   score[0] = 0;
   score[1] = 0;
